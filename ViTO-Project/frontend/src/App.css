@@ -1,0 +1,1031 @@
+/* GENERAL STYLES */
+/* GENERAL STYLES */
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none; /* Removes underline from links */
+}
+
+
+
+/* NAVBAR STYLES */
+/* NAVBAR STYLES */
+/* NAVBAR STYLES */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  opacity: 0.7;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navbar a {
+  color: purple; /* Link color */
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: purple;
+  margin: 10px;
+}
+
+.logo p {
+  color: white; /* Subtitle color */
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px; /* Space between links */
+}
+
+.nav-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Removes underline */
+  font-size: 15px;
+  position: relative;
+  transition: color 0.3s, border-bottom 0.3s ease; /* Smooth hover transition */
+  margin: 10px;
+}
+
+.nav-links a::after {
+  content: ''; /* For hover effect */
+  position: absolute;
+  width: 0; /* Initial width */
+  height: 3px; /* Height of underline */
+  background-color: purple; /* Underline color */
+  left: 0; 
+  bottom: -3px; 
+  transition: width 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.nav-links a:hover {
+  color: white; /* Hover link color */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row; /* Aligns buttons in a row */
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.signup-button, .logout-button, .admin-button {
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1rem;
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Button hover effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-button {
+  background-color: purple; /* Button color */
+  color: white;
+  border: 1px solid black;
+}
+
+.signup-button:hover, .admin-button:hover, .logout-button:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+.logout-button {
+  background-color: white; /* Logout button color */
+  color: red;
+  border: 1px solid black;
+}
+
+.admin-button {
+  background-color: purple; /* Admin button color */
+  color: white;
+  border: 1px solid black;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .nav-links a {
+    font-size: 13px; /* Smaller font size */
+    margin: 6px; /* Adjusts margin */
+  }
+
+  .buttons {
+    margin-left: 20px; /* Adjusts button margin */
+  }
+
+  .signup-button, .logout-button, .admin-button {
+    width: auto; /* Flexible width */
+    height: 35px; /* Smaller height */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-links a {
+    font-size: 12px; /* Smaller font size */
+    margin: 4px; /* Adjusts margin */
+  }
+
+  .buttons {
+    margin-left: 10px; /* Adjusts button margin */
+  }
+
+  .signup-button, .logout-button, .admin-button {
+    width: 60px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .nav-links a {
+    font-size: 9.4px; /* Smaller font size */
+    margin: 1px; /* Adjusts margin */
+  }
+
+  .buttons {
+    margin-left: 10px; /* Adjusts button margin */
+  }
+
+  .signup-button, .logout-button, .admin-button {
+    width: 50px; /* Fixed width */
+    height: 25px; /* Fixed height */
+    font-size: 0.7rem; /* Smaller font size */
+  }
+}
+
+
+
+/* HOME STYLES */
+/* HOME STYLES */
+/* HOME STYLES */
+
+.home-section {
+  position: relative;
+  background: url('C:/xampp/htdocs/ViTO-Project/frontend/src/images/hero.jpg') no-repeat center center/cover; /* Background image */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  padding-left: 30px; /* Left padding */
+  padding-top: 200px; /* Top padding */
+  color: white; /* Text color */
+}
+
+.home-text {
+  margin-top: 100px; /* Margin from the top */
+  margin-left: 50px; /* Left margin */
+}
+
+.home-text h1 {
+  font-size: 4rem; /* Main heading size */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+.home-text h2 {
+  font-size: 2rem; /* Subheading size */
+  margin-bottom: 1rem; /* Space below subheading */
+}
+
+.home-text p {
+  font-size: 2rem; /* Paragraph text size */
+  margin-bottom: 2rem; /* Space below paragraph */
+}
+
+.btn-primary {
+  margin-left: 150px; /* Margin on the left */
+  border: 1px solid black; /* Border styling */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  width: 270px; /* Button width */
+  height: 50px; /* Button height */
+  background-color: purple; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 1.2rem; /* Button text size */
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Smooth transition on hover */
+}
+
+.btn-primary:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Responsive Home section - Media Queries */
+/* For tablets and below */
+@media screen and (max-width: 1024px) {
+  .home-section {
+    padding-top: 100px; /* Adjusted top padding */
+    padding-left: 20px; /* Adjusted left padding */
+  }
+
+  .home-text {
+    margin-left: 20px; /* Reduced left margin */
+    text-align: center; /* Center text */
+  }
+
+  .home-text h1 {
+    font-size: 3rem; /* Reduced heading size */
+  }
+
+  .home-text h2 {
+    font-size: 1.75rem; /* Reduced subheading size */
+  }
+
+  .home-text p {
+    font-size: 1.5rem; /* Reduced paragraph size */
+  }
+
+  .btn-primary {
+    width: 200px; /* Adjusted button width */
+    height: 40px; /* Adjusted button height */
+    font-size: 1rem; /* Reduced button text size */
+    margin-left: 0; /* Reset left margin */
+    display: block; /* Block display */
+    margin: 20px auto; /* Center button */
+  }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 800px) {
+  .home-section {
+    padding-top: 250px; /* Increased top padding */
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem; /* Further reduced heading size */
+  }
+
+  .home-text h2 {
+    font-size: 1.5rem; /* Further reduced subheading size */
+  }
+
+  .home-text p {
+    font-size: 1.2rem; /* Further reduced paragraph size */
+  }
+
+  .btn-primary {
+    width: 180px; /* Adjusted button width */
+    height: 40px; /* Adjusted button height */
+    font-size: 1rem; /* Button text size */
+  }
+}
+
+
+
+/* MAIN SECTION */
+/* MAIN SECTION */
+/* MAIN SECTION */
+
+/* ABOUT STYLES */
+/* ABOUT STYLES */
+/* ABOUT STYLES */
+
+.about-section {
+  background-color: black;
+  color: white;
+  /* margin: 50px auto; */
+  max-width: 2500px; /* Limits the section width on larger screens */
+  padding: 40px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  position: relative; 
+}
+
+.about-section h2::after {
+  content: "";
+  display: block;
+  width: 100px; /*  underline width */
+  height: 5px; /* Underline height */
+  background-color: purple; /* Underline color */
+  margin: 10px auto 0; /* Space between text and underline */
+  border-radius: 5px;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* About Features */
+.about-features {
+  margin: 0 auto; /* Centers the flex container */
+  display: flex;
+  flex-direction: row; /* for the icons and text to be in a row */
+  justify-content: center; /* Center align items */
+  flex-wrap: wrap; /* Wraps items on smaller screens */
+  gap: 30px; /* Adds space between each feature card */
+  max-width: 1200px; /* Set a max-width for better alignment */
+}
+
+.about-icons {
+  margin: 0 auto; /* Centers the flex container */
+  background-color: #737070;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  height: auto; 
+  display: flex;
+  flex-direction: column; /* Arrange icon and text vertically */
+  align-items: center; 
+  width: 800px; /* Adjust the width as necessary */
+}
+
+.about-icons:hover{
+  transform: scale(1.05);  
+}
+
+.about-icons svg {
+  margin-top: 0px;
+}
+
+.about-features h3 {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+.about-features p {
+  font-size: 1.1em;
+  margin-top: 10px;
+  text-align: center; /* Center align the text under each feature */
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-video {
+  padding-top: 100px;
+}
+
+.about-video video {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+}
+
+@media (max-width: 2000px) {
+  .about-video {
+    margin: 0;
+  }
+
+  .about-features {
+    flex-direction: column; /* Stacks items on smaller screens */
+  }
+
+  .about-icons {
+    max-width: 100%; /* allows for full width on smaller screens */
+  }
+
+  .about-video {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* STATISTICS STYLES */
+/* STATISTICS STYLES */
+/* STATISTICS STYLES */
+
+.statistics-section {
+  position: relative;
+  background: url('C:/xampp/htdocs/ViTO-Project/frontend/src/images/hero2.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Prevent the background from moving while scrolling */
+  padding: 50px 20px;
+  text-align: center;
+  padding-top: 250px;
+}
+
+/*  background overlay */
+.statistics-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  margin-top: -180px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* rows Styling to display items horizontally */
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  /* Align items vertically in the center */
+  flex-wrap: nowrap;  /* No wrapping, items will stay in one row */
+  width: 100%;
+  max-width: 1200px; 
+}
+
+/* Stat item styling */
+.stat-item {
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex: 1 1 auto; /* Flexible width for each item */
+  max-width: 250px;
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+}
+
+/* Stat item text */
+.stat-item h3 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  /* Stack items vertically on smaller screens */
+  .row {
+    flex-direction: column; /* Switch to vertical layout */
+  }
+
+  .stat-item {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .stat-item h3 {
+    font-size: 30px;
+  }
+
+  .stat-item p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* SERVICES STYLES */
+/* SERVICES STYLES */
+/* SERVICES STYLES */
+
+.services-section {
+  padding: 40px 20px;
+  background-color: black;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.services-section h2 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.services-section h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: purple;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Increased the min size to 450px */
+  gap: 50px; /* Space between grid items */
+  max-width: 1400px; /* Limit max width for larger screens */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 20px;
+}
+
+/* Service card styling */
+.service-item {
+  background-color: #737070;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  height: 300px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 550px; /* Increased max width */
+  margin: auto; /* Center the card in its grid cell */
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item h3 {
+  font-size: 1.8em; /* Increased font size */
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.service-item p {
+  color: white;
+  font-size: 1.1em; /* Increased font size for description */
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+
+  .services-section h2 {
+      font-size: 1.8rem;
+  }
+
+  .service-item h3 {
+      font-size: 1.6em; /* Adjust heading size */
+  }
+
+  .service-item p {
+      font-size: 1.1em; /* Adjust paragraph size */
+  }
+}
+
+@media (min-width: 1600px) {
+  .services-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+
+  .service-item {
+      height: 350px; /* Keep the height consistent */
+      max-width: 600px; /* Further increased card width for large screens */
+  }
+}
+
+
+
+/* TESTIMONIAL STYLES */
+/* TESTIMONIAL STYLES */
+/* TESTIMONIAL STYLES */
+
+.testimonial-section {
+  padding-top: 150px; /* Top padding for section */
+  padding-bottom: 100px; /* Bottom padding for section */
+}
+
+.testimonial-section h2 {
+  font-size: 2rem; /* Heading size */
+  text-align: center; /* Center the heading */
+  margin-bottom: 50px; /* Space below heading */
+  position: relative; /* Position for the after element */
+}
+
+.testimonial-section h2::after {
+  content: ""; /* After pseudo-element */
+  display: block; /* Display as block */
+  width: 100px; /* Width of the underline */
+  height: 5px; /* Height of the underline */
+  background-color: purple; /* Underline color */
+  margin: 10px auto 0; /* Centered margin */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Testimonial Item */
+.testimonial-item {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 50px; /* Padding around item */
+}
+
+/* Image  */
+.testimonial-image img {
+  border-radius: 50%; /* Circular image */
+  width: 200px; /* Image width */
+  height: 200px; /* Image height */
+  object-fit: cover; /* Cover the container */
+  margin-right: 200px; /* Space to the right */
+  margin-bottom: 200px; /* Space below image */
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  max-width: 600px; /* Max width for text */
+  font-size: 20px; /* Text size */
+}
+
+.testimonial-text blockquote {
+  color: black; /* Color for blockquote */
+}
+
+.testimonial-text p {
+  font-size: 20px; /* Paragraph text size */
+  margin-top: 10px; /* Space above paragraph */
+  color: black; /* Paragraph text color */
+}
+
+/* Grid for responsive layout */
+.testimonial-grid {
+  display: flex; /* Flexbox for grid */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* Wrap items to next line */
+  align-items: center; /* Center items vertically */
+}
+
+/* Media Queries for Larger Screens */
+@media (max-width: 1024px) {
+  .testimonial-item {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+  }
+
+  .testimonial-image img {
+    margin-bottom: 20px; /* Space below image */
+    margin-right: 0; /* Reset right margin */
+  }
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 800px) {
+  .testimonial-item {
+    padding: 20px; /* Reduced padding for small screens */
+  }
+
+  .testimonial-section h2 {
+    font-size: 1.8rem; /* Reduced heading size for small screens */
+  }
+}
+
+
+
+/* TEAM STYLES */
+/* TEAM STYLES */
+/* TEAM STYLES */
+
+.team-section {
+  background-color: black;
+  color: white;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative; 
+}
+
+.team-section h2::after {
+  content: "";
+  display: block;
+  width: 100px; /* Adjust this for the underline width */
+  height: 5px; /* Underline thickness */
+  background-color: purple; /* Underline color */
+  margin: 10px auto 0; /* Space between text and underline */
+  border-radius: 5px; /* To make the underline slightly rounded */
+}
+
+.team-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows the team members to wrap to the next line on smaller screens */
+  max-width: 1200px; /* Limits the maximum width of the team section */
+  margin: 0 auto; /* Center the team grid horizontally */
+}
+
+.team-member {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis. This makes sure each member takes up at least 300px and can grow to fill space. */
+  margin: 10px;
+  text-align: center;
+  max-width: 300px;
+  height: 450px;
+}
+
+.team-member img {
+  width: 100%; /* Image will take up 100% of the container's width */
+  height: 70%; /* Maintain aspect ratio */
+  border-radius: 30%;
+  border: 2px solid purple;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);  
+}
+
+.team-member h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.team-member p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.team-member .social {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.social a {
+  color: purple;
+  margin: 20px;
+}
+
+/* Media Queries for medium screens (between 768px and 1024px) */
+@media (max-width: 1024px) and (min-width: 800px) {
+  .team-grid {
+    justify-content: center; /* Center the team members */
+  }
+
+  .team-member {
+    flex: 1 1 30%; /* Each team member will take up about 45% of the width on medium-sized screens */
+    margin: 50px;
+  }
+}
+
+/* Media Queries for smaller screens (below 800px) */
+@media (max-width: 800px) {
+  .team-grid {
+    flex-direction: column; /* Stack team members vertically on smaller screens */
+    align-items: center;
+  }
+
+  .team-member {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+/* CONTACT STYLES */
+/* CONTACT STYLES */
+/* CONTACT STYLES */
+
+.contact-section {
+  position: relative;
+  background: url('C:/xampp/htdocs/ViTO-Project/frontend/src/images/hero2.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Prevent the background from moving while scrolling */
+  margin: 0 auto; /* Center the section */
+  max-width: 100%; /* Allow flexibility for smaller screens */
+  padding-top: 100px; /* Adjust padding for smaller screens */
+  padding-bottom: 50px; 
+  color: white; /* Set text color to white for contrast */
+}
+
+/* Overlay effect */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Title styles */
+.contact-section h1 {
+  padding-top: 50px;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; 
+  z-index: 2; /* Ensure the title is above the overlay */
+}
+
+/* Underline for the title */
+.contact-section h1::after {
+  content: "";
+  display: block;
+  width: 100px; /* Adjust this for the underline width */
+  height: 5px; /* Underline thickness */
+  background-color: purple; /* Underline color */
+  margin: 10px auto 0; /* Space between text and underline */
+  border-radius: 5px; /* To make the underline slightly rounded */
+  z-index: 2; /* Ensure the underline is above the overlay */
+}
+
+/* Contact grid styles */
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2; /* Ensure form is above the overlay */
+}
+
+/* Form styles */
+.contact-grid form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Make the form take the available space */
+  max-width: 500px; /* Limit the width to avoid overflowing */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.contact-grid form input,
+.contact-grid form textarea {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 100%; /* Make inputs and textareas responsive */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.contact-grid form button {
+  padding: 1rem;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  width: 100%; /* Make the button responsive */
+  box-sizing: border-box;
+}
+
+.contact-grid form button:hover {
+  transform: scale(1.05);  
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact-grid form {
+    padding: 0 10px;
+  }
+
+  .contact-grid form input,
+  .contact-grid form textarea {
+    padding: 0.8rem; /* Reduce padding for smaller screens */
+  }
+}
+
+
+
+/* FOOTER STYLES */
+/* FOOTER STYLES */
+/* FOOTER STYLES */
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.address, .contact, .socials {
+  flex: 1;
+  margin: 30px;
+}
+
+.address h2, .contact h2, .socials h2 {
+  color: white; /* Adjust color to match design */
+  margin-bottom: 10px;
+}
+
+.address p, .contact p, .social-links {
+  color: #999;
+}
+
+.social-links a {
+  margin: 0px 20px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: purple;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-button {
+  position: fixed;  /* Make the button stay in place while scrolling */
+  bottom: 20px;     /* Position it from the bottom */
+  right: 20px;      /* Position it from the right */
+}
+
+.back-to-top {
+  background-color: #444;  /* Dark background color */
+  color: #fff;             /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #666;  /* Change color on hover */
+}
+
+.back-to-top a {
+  color: #fff;  
+  text-decoration: none;
+}
